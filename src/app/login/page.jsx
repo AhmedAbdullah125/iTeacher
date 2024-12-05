@@ -14,12 +14,13 @@ import img10 from '../../../src/images/vectors/8.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 export default function login() {
-    // useEffect(() => {
-    //     document.querySelector('.bodyCont').classList.add('sign-pages');
-    //     document.querySelector('.bodyCont').classList.remove('bodyCont');
-    //     document.querySelector('.bodyCont').classList.toggle('bodyCont');
+    useEffect(() => {
+        document.body.classList.add('sign-pages');
+        document.body.classList.remove('bodyCont');
+        // document.querySelector('.bodyCont').classList.toggle('bodyCont');
+        // document.querySelector('.bodyCont').classList.remove('bodyCont');
         
-    // }, []);
+    }, []);
     return (
         <section className="sign-section">
         <div className="container m-auto">

@@ -19,8 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" id='root'>
-      <body className="w-full" suppressHydrationWarning={true}>
-        <div className="bodyCont ">
+      <body className="w-full bodyCont" suppressHydrationWarning={true}>
+        <div className=" ">
           <div className="body-wrapper">
             <Header />
             {children}
