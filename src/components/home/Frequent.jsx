@@ -23,7 +23,9 @@ export default function Frequent() {
             </div>
             <div className="freq-subs">
                 <div className="sub">
-                    <Image src={sub1} alt='iTeacher' />
+                    <div className="img-cont">
+                        <Image src={sub1} alt='iTeacher' />
+                    </div>
                     <h2>Evaluate various</h2>
                     <h3>Evaluate various</h3>
                     <p>fact that a reader will be distracted by thecontent of en at its layout.</p>
@@ -34,12 +36,15 @@ export default function Frequent() {
                     <Link href={'#'} className='v-sub'>
                         View Subject
                         <div className="arr">
-                            <i className="fa-solid fa-arrow-right"></i>
+                            <i className="fa-solid fa-arrow-right-long"></i>
                         </div>
                     </Link>
+                    <span className='bg-card'></span>
                 </div>
                 <div className="sub">
-                    <Image src={sub2} alt='iTeacher' />
+                <div className="img-cont">
+                        <Image src={sub2} alt='iTeacher' />
+                    </div>
                     <h2>Evaluate various</h2>
                     <h3>Evaluate various</h3>
                     <p>fact that a reader will be distracted by thecontent of en at its layout.</p>
@@ -50,12 +55,15 @@ export default function Frequent() {
                     <Link href={'#'} className='v-sub'>
                         <span>View Subject</span>
                         <div className="arr">
-                            <i className="fa-solid fa-arrow-right"></i>
+                            <i className="fa-solid fa-arrow-right-long"></i>
                         </div>
                     </Link>
+                    <span className='bg-card'></span>
                 </div>
                 <div className="sub">
-                    <Image src={sub3} alt='iTeacher' />
+                <div className="img-cont">
+                        <Image src={sub3} alt='iTeacher' />
+                    </div>
                     <h2>Evaluate various</h2>
                     <h3>Evaluate various</h3>
                     <p>fact that a reader will be distracted by thecontent of en at its layout.</p>
@@ -66,9 +74,10 @@ export default function Frequent() {
                     <Link href={'#'} className='v-sub'>
                         <span>View Subject</span>
                         <div className="arr">
-                            <i className="fa-solid fa-arrow-right"></i>
+                            <i className="fa-solid fa-arrow-right-long"></i>
                         </div>
                     </Link>
+                    <span className='bg-card'></span>
                 </div>
             </div>
         </div>

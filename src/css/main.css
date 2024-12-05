@@ -214,6 +214,11 @@ header {
   padding: 44px 0 0;
   margin-bottom: 65px;
 }
+@media only screen and (max-width: 991px) {
+  header {
+    margin-bottom: 32px;
+  }
+}
 
 .header-cont {
   display: flex;
@@ -317,6 +322,14 @@ header {
   background-attachment: fixed;
 }
 
+.bodyCont:has(.llogin) {
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-image: url(../images/sign-bg.svg);
+  background-size: cover;
+  background-position: center;
+}
+
 .main-home {
   position: relative;
   display: flex;
@@ -412,10 +425,9 @@ header {
   color: var(--main-color);
 }
 .main-home .side-bar .discussions .rocket-img {
-  width: 180px;
   position: absolute;
-  inset-inline-end: -10px;
-  bottom: 35px;
+  inset-inline-end: 13px;
+  bottom: 22px;
 }
 .main-home .side-bar .discussions .paper-img {
   position: absolute;
@@ -468,7 +480,7 @@ header {
   gap: 12px;
   background-color: var(--white-color);
   border-radius: 30px;
-  padding: 20px 12px;
+  padding: 24px 12px 18px;
   width: 100%;
 }
 .main-home .main-content .counter-cont .contter .bordered-counter img {
@@ -477,9 +489,10 @@ header {
 }
 .main-home .main-content .counter-cont .contter .bordered-counter .counter span {
   font-size: 40px;
+  line-height: 24px;
   font-weight: 800;
   color: #1F1F1F;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 .main-home .main-content .counter-cont .contter .bordered-counter .counter p {
   font-size: 24px;
@@ -505,11 +518,12 @@ header {
 }
 .main-home .main-content .saying-hey .hey {
   position: absolute;
-  top: -50px;
+  top: -44px;
   padding: 12px 30px;
   border-radius: 60px;
   background-color: var(--white-color);
   inset-inline-start: 25px;
+  box-shadow: 10px 14px 24px 0px rgba(0, 0, 0, 0.1411764706);
 }
 .main-home .main-content .saying-hey .hey .text-cont {
   position: relative;
@@ -676,6 +690,20 @@ header {
   background-color: var(--white-color);
   border-radius: 56px;
   padding: 6px 200px 6px 20px;
+  border: 1px solid transparent;
+}
+.main-home .main-content .help-steps .form-cont input::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+.main-home .main-content .help-steps .form-cont input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+.main-home .main-content .help-steps .form-cont input:focus {
+  border: 1px solid #0E76BC;
 }
 .main-home .main-content .help-steps .form-cont .btnss {
   position: absolute;
@@ -696,6 +724,10 @@ header {
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
+}
+.main-home .main-content .help-steps .form-cont .btnss .custom-submit:hover {
+  background-color: var(--main-hover);
 }
 .main-home .main-content .help-steps .form-cont .btnss .submit {
   display: none;
@@ -780,6 +812,21 @@ header {
 .freq .heading a span {
   text-wrap: nowrap;
 }
+.freq .heading a:hover {
+  background-color: var(--main-hover);
+}
+
+.suggested-subjects .heading a:hover {
+  background-color: var(--main-hover);
+  border-color: var(--main-hover);
+  color: var(--white-color);
+}
+
+.heading a:hover {
+  background-color: var(--main-hover);
+  border-color: var(--main-hover);
+  color: var(--white-color);
+}
 
 .freq-subs {
   display: grid;
@@ -792,16 +839,41 @@ header {
   flex-direction: column;
   gap: 8px;
   padding: 30px;
-  background-color: var(--white-color);
   border-radius: 20px;
   z-index: 5;
+  position: relative;
+  max-width: 292px;
+}
+.freq-subs .sub .bg-card {
+  overflow: hidden;
+  -webkit-mask-image: url(../images/mask22.png);
+  mask-image: url(../images/mask22.png);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  position: absolute;
+  inset: 0;
+  background-color: var(--white-color);
+  z-index: -1;
+  height: 100%;
+}
+.freq-subs .sub .img-cont {
+  -webkit-mask-image: url(../images/mask33.png);
+  mask-image: url(../images/mask33.png);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  aspect-ratio: 232/180;
+  max-width: 232px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 .freq-subs .sub img {
   width: 100%;
-  aspect-ratio: 232/180;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 20px;
 }
 .freq-subs .sub h2 {
   font-size: 24px;
@@ -826,14 +898,18 @@ header {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 .freq-subs .sub .grade span {
-  font-size: 14px;
-  font-weight: 500;
-  padding: 3px 8px;
+  padding: 7px 8px;
   border-radius: 10px;
   font-size: 16px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
 }
 .freq-subs .sub .grade .level {
   color: #F26522;
@@ -848,10 +924,16 @@ header {
   border-radius: 56px;
   color: var(--white-color);
   position: relative;
-  padding: 6px;
+  padding: 0 6px;
   font-size: 16px;
   font-weight: 500;
   text-align: center;
+  height: 44px;
+  line-height: 44px;
+  padding-inline-end: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .freq-subs .sub .v-sub .arr {
   position: absolute;
@@ -866,6 +948,13 @@ header {
   align-items: center;
   justify-content: center;
   border-radius: 56px;
+}
+.freq-subs .sub .v-sub:hover {
+  color: var(--white-color);
+  background-color: var(--main-hover);
+}
+.freq-subs .sub .v-sub:hover .arr {
+  background-color: var(--main-color);
 }
 
 .accordion-title {
@@ -1015,6 +1104,9 @@ header {
   gap: 10px;
   border-radius: 56px;
 }
+.suggested-subjects .heading a:hover {
+  color: var(--white-color);
+}
 .suggested-subjects .heading a img {
   width: 20px;
   height: 20px;
@@ -1064,10 +1156,18 @@ header {
   font-weight: 400;
 }
 .suggested-subjects .sug-subs-cont .sug button {
-  padding: 3px 28px;
+  padding: 0 28px;
   border-radius: 10px;
   background-color: var(--white-color);
   color: #1F1F1F;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.suggested-subjects .sug-subs-cont .sug button:hover {
+  background-color: var(--main-hover);
+  color: var(--white-color);
 }
 .suggested-subjects .sug-subs-cont .img-arrow {
   display: flex;
@@ -1102,6 +1202,14 @@ header {
 .suggested-subjects .sug-subs-cont .img-arrow a i {
   margin-inline-start: 10px;
 }
+.suggested-subjects .sug-subs-cont .img-arrow a:hover i {
+  transform: translate(4px, 0px);
+}
+
+.view-img-d:hover {
+  color: white;
+  background-color: var(--main-hover);
+}
 
 .suggested-subjects .sug-subs-cont .sug:nth-child(1) {
   background-color: #735FF2;
@@ -1130,29 +1238,32 @@ header {
     transform: translateX(0px);
   }
 }
-@media (max-width: 1400px) {
-  .main-home .side-bar-mini {
-    width: auto;
-    padding: 15px;
-    position: absolute;
-    top: -55px;
-  }
-  .main-home .side-bar-mini .arrows {
-    margin-bottom: 0;
-  }
-  .main-home .side-bar-mini .arrows .add {
-    display: none;
-  }
-  .main-home .side-bar-mini .all-cont {
-    display: none;
-  }
+.main-home .side-bar-mini {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 15px;
+  top: -55px;
 }
+.main-home .side-bar-mini .arrows {
+  margin-bottom: 0;
+}
+.main-home .side-bar-mini .arrows .add {
+  display: none;
+}
+.main-home .side-bar-mini .all-cont {
+  display: none;
+}
+
 @media (max-width: 991px) {
   .freq-subs {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
   .freq .heading {
     flex-direction: column;
+    align-items: flex-end;
   }
   .suggested-subjects .sug-subs-cont {
     grid-template-columns: 1fr;
@@ -1167,6 +1278,7 @@ header {
   }
   .main-home .main-content h2 {
     font-size: 32px;
+    text-align: center;
   }
   .main-home .main-content .counter-cont {
     flex-direction: column;
@@ -1176,15 +1288,26 @@ header {
   }
   .freq .heading h3 {
     font-size: 28px;
+    text-align: center;
+  }
+  .freq .heading {
+    align-items: center;
   }
   .main-home .main-content h2 {
     font-size: 24px;
   }
   .freq-subs .sub .grade {
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
   }
   .freq-subs .sub .grade span {
     width: 100%;
+    width: -moz-max-content;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-wrap: nowrap;
   }
 }
 @media (max-width: 550px) {
@@ -1209,9 +1332,6 @@ header {
   }
   .main-home .main-content .counter-cont .contter .bordered-counter .counter p {
     font-size: 20px;
-  }
-  .accordion-item {
-    padding: 7px;
   }
   .main-home .side-bar .discussions .rocket-img {
     display: none;
@@ -1249,7 +1369,14 @@ header {
     padding: 0 15px;
   }
   .freq {
-    padding: 5px 10px 70px;
+    padding: 5px 22px 70px;
+    background-color: #f9f6ef;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 960px;
+    position: relative;
+    margin-bottom: 100px;
+    overflow: hidden;
   }
   .freq-subs .sub {
     padding: 10px;
@@ -1260,7 +1387,8 @@ header {
     flex-shrink: 0;
     font-size: 16px;
   }
-  .main-home .main-content h2, .freq .heading h3 {
+  .main-home .main-content h2,
+  .freq .heading h3 {
     font-size: 20px;
     text-align: start;
   }
@@ -1844,7 +1972,9 @@ textarea.form-input {
 
 .chat-main {
   width: 100%;
+  max-width: 960px;
   max-height: calc(100vh - 180px);
+  margin: 0 auto;
 }
 
 .yell-cont {
@@ -1892,9 +2022,8 @@ textarea.form-input {
 .white-cont .abs-text-area {
   position: absolute;
   bottom: 30px;
-  width: calc(100% - 60px);
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  padding: 0 30px;
 }
 .white-cont .abs-text-area textarea {
   width: 100%;
@@ -1907,7 +2036,7 @@ textarea.form-input {
 }
 .white-cont .btns-cont {
   position: absolute;
-  bottom: 46px;
+  bottom: 55px;
   inset-inline-end: 46px;
   z-index: 10;
   display: flex;

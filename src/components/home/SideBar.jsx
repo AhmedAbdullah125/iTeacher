@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import teatcher from '/public/teacher.svg'
 import starImg from '/public/star.svg'
 import cloud from '/public/cloud2.svg'
-import rocket from '/public/rocket.png'
+import rocket from '/public/rocket.svg'
 import paper from '/public/paper.svg'
 import numBack from '/public/numBack.svg'
 import {

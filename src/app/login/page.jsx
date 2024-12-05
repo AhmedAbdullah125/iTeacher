@@ -14,15 +14,15 @@ import img10 from '../../../src/images/vectors/8.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 export default function login() {
-    useEffect(() => {
-        document.body.classList.add('sign-pages');
-        document.body.classList.remove('bodyCont');
-        // document.querySelector('.bodyCont').classList.toggle('bodyCont');
-        // document.querySelector('.bodyCont').classList.remove('bodyCont');
+    // useEffect(() => {
+    //     document.body.classList.add('sign-pages');
+    //     document.body.classList.remove('bodyCont');
+    //     // document.querySelector('.bodyCont').classList.toggle('bodyCont');
+    //     // document.querySelector('.bodyCont').classList.remove('bodyCont');
         
-    }, []);
+    // }, []);
     return (
-        <section className="sign-section">
+        <section className="sign-section llogin">
         <div className="container m-auto">
           <div className="sign-cont">
             <Image

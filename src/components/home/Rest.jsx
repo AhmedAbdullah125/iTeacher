@@ -114,7 +114,7 @@ export default function Rest() {
                         </div>
                         <Image className='tall-dotsmm' src={tallDots} alt="iTeacher" />
                     </div>
-                    <div className="form-cont">
+                    <form className="form-cont">
                         <input type="text" placeholder='Write your question here...'></input>
                         <div className="btnss">
                             <label for="file-upload" className="custom-file-upload">
@@ -125,7 +125,7 @@ export default function Rest() {
                             </label>
                             <input type="submit" className='submit' id="submit"></input>
                         </div>
-                    </div>
+                    </form>
                     <Image src={cloud} alt='iTeacher' className='cloud-img'></Image>
                 </div>
             </div>

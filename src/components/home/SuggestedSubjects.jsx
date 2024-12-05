@@ -10,7 +10,7 @@ export default function SuggestedSubjects() {
         <div className="suggested-subjects">
             <div className="heading">
                 <h2>Suggested Subjects</h2>
-                <Link href={'#'}><Image src={view} className='view-img' alt='iTeacher'></Image> <span>View All</span></Link>
+                <Link href={'#'}><Image src={view} className='view-img-d' alt='iTeacher'></Image> <span>View All</span></Link>
             </div>
             <div className="sug-subs-cont">
                 <div className="sug">
@@ -25,7 +25,7 @@ export default function SuggestedSubjects() {
                     </div>
                     <div className="img-arrow">
                         <Image src={sub} alt='iTeacher' />
-                        <Link href={'#'}> View Subject <i className="fa-solid fa-arrow-right"></i></Link>
+                        <Link href={'#'}> View Subject <i className="fa-solid fa-arrow-right-long"></i></Link>
                     </div>
                 </div>
                 <div className="sug">
@@ -40,7 +40,7 @@ export default function SuggestedSubjects() {
                     </div>
                     <div className="img-arrow">
                         <Image src={sub} alt='iTeacher' />
-                        <Link href={'#'}> View Subject <i className="fa-solid fa-arrow-right"></i></Link>
+                        <Link href={'#'}> View Subject <i className="fa-solid fa-arrow-right-long"></i></Link>
                     </div>
                 </div>
                 <div className="sug">
@@ -55,7 +55,7 @@ export default function SuggestedSubjects() {
                     </div>
                     <div className="img-arrow">
                         <Image src={sub} alt='iTeacher' />
-                        <Link href={'#'}> View Subject <i className="fa-solid fa-arrow-right"></i></Link>
+                        <Link href={'#'}> View Subject <i className="fa-solid fa-arrow-right-long"></i></Link>
                     </div>
                 </div>
                 <div className="sug">
@@ -70,7 +70,7 @@ export default function SuggestedSubjects() {
                     </div>
                     <div className="img-arrow">
                         <Image src={sub} alt='iTeacher' />
-                        <Link href={'#'}> View Subject <i className="fa-solid fa-arrow-right"></i></Link>
+                        <Link href={'#'}> View Subject <i className="fa-solid fa-arrow-right-long"></i></Link>
                     </div>
                 </div>
             </div>

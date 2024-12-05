@@ -1,6 +1,8 @@
 .chat-main {
     width: 100%;
+    max-width: 960px;
     max-height: calc(100vh - 180px);
+    margin: 0 auto;
 }
 
 .yell-cont {
@@ -52,9 +54,9 @@
     .abs-text-area {
         position: absolute;
         bottom: 30px;
-        width: calc(100% - 60px);
-        left: 50%;
-        transform: translateX(-50%);
+        width: 100%;
+        padding: 0 30px;
+
 
         textarea {
             width: 100%;
@@ -69,12 +71,13 @@
 
     .btns-cont {
         position: absolute;
-        bottom: 46px;
+        bottom: 55px;
         inset-inline-end: 46px;
         z-index: 10;
         display: flex;
         align-items: center;
         gap: 15px;
+
 
         .send-btn-cont {
             padding: 12px 34px;
@@ -160,17 +163,21 @@
             font-weight: 700;
             font-size: 18px;
         }
-        ul{
+
+        ul {
             list-style-type: disc;
             padding: 0 2rem;
         }
-        ol{
+
+        ol {
             list-style-type: decimal !important;
-            li{
+
+            li {
                 list-style-type: decimal !important;
             }
         }
-        .code{
+
+        .code {
             // font-family:"Space Mono";
             border-radius: 20px;
             width: 100%;
@@ -178,34 +185,41 @@
             border: 1px solid #E6E6E6;
             overflow: hidden;
 
-            .code-head{
+            .code-head {
                 min-height: 40px;
                 background-color: #F3F3F3;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: 6px 19px;
-                i{
+
+                i {
                     color: #6255A4;
                 }
             }
-            .code-body{
+
+            .code-body {
                 padding: 6px 19px;
                 overflow: auto;
-                .comment{
+
+                .comment {
                     color: #B8B8BA;
                 }
-                .number{
+
+                .number {
                     color: #DF3079;
                 }
-                .keyword{
+
+                .keyword {
                     color: #E9840C;
                 }
-                .variab{
+
+                .variab {
                     color: #08977D;
                 }
             }
         }
+
         .message {
             color: #1F1F1F;
             width: fit-content;
@@ -223,14 +237,16 @@
         }
     }
 }
+
 @media (max-width: 600px) {
-    .yell-cont{
+    .yell-cont {
         padding: 46px 10px 85px;
     }
+
     .white-cont {
-        .messages-cont{
+        .messages-cont {
             padding: 0 10px;
         }
-        
+
     }
 }
