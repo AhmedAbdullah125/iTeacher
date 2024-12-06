@@ -14,9 +14,11 @@ export default function Frequent() {
     return (
         <div className="freq">
             <Image src={cur} alt='iTeacher' className='cur-img' />
-            <Image src={atom} alt='iTeacher' className='atom' />
-            <Image src={abaj} alt='iTeacher' className='abaj' />
-            <Image src={book} alt='iTeacher' className='book' />
+            <div className='image-bg-freq'>
+                <Image src={atom} alt='iTeacher' className='atom' />
+                <Image src={abaj} alt='iTeacher' className='abaj' />
+                <Image src={book} alt='iTeacher' className='book' />
+            </div>
             <div className="heading">
                 <h3>The most frequently asked and searched subjects</h3>
                 <Link href={'#'}><Image src={view} className='view-img' alt='iTeacher'></Image> <span>View All</span></Link>
@@ -42,7 +44,7 @@ export default function Frequent() {
                     <span className='bg-card'></span>
                 </div>
                 <div className="sub">
-                <div className="img-cont">
+                    <div className="img-cont">
                         <Image src={sub2} alt='iTeacher' />
                     </div>
                     <h2>Evaluate various</h2>
@@ -61,7 +63,7 @@ export default function Frequent() {
                     <span className='bg-card'></span>
                 </div>
                 <div className="sub">
-                <div className="img-cont">
+                    <div className="img-cont">
                         <Image src={sub3} alt='iTeacher' />
                     </div>
                     <h2>Evaluate various</h2>

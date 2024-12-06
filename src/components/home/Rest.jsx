@@ -1,7 +1,9 @@
+'use client'
 import harts from '/public/harts.svg'
 import tringStar from '/public/tringStar.svg'
 import dots from '/public/dots.svg'
 import send from '/public/send.png'
+import car from '/public/car.svg'
 import lamb from '/public/lamb.svg'
 import tallDots from '/public/tallDots.svg'
 import cloud from '/public/cloud.svg'
@@ -10,8 +12,18 @@ import logo from '/public/logoMini.png'
 import NumberTicker from '../ui/number-ticker';
 import Image from 'next/image';
 import React from 'react';
+import { motion } from 'framer-motion';
+
 
 export default function Rest() {
+    let relatives = [
+        { id: 1, text: "First Level 1" },
+        { id: 2, text: "First Level 2" },
+        { id: 3, text: "First Level 3" },
+        { id: 4, text: "First Level 4" },
+        { id: 5, text: "First Level 5" },
+        { id: 6, text: "First Level 9" },
+    ]
     return (
         <div className="rest">
             <h2>Conversation <span>AI Solutions</span> Infinite Possibilities 💪🏻</h2>
@@ -40,7 +52,7 @@ export default function Rest() {
                     <div className="hey">
                         <div className="text-cont">
                             Hey, Shams !
-                            <div className="arrow">
+                            <div className="arrow-after">
                             </div>
                         </div>
                     </div>
@@ -52,67 +64,65 @@ export default function Rest() {
                 <div className="help-steps">
                     <h3>What Can I help with?</h3>
                     <div className="trings-cont">
-                        <div className="relative">
-                            <div className="dotted-star">
-                                <Image className='star' src={tringStar} alt="iTeacher" />
-                                <Image className='dots' src={dots} alt="iTeacher" />
-                            </div>
-                            <div className="tring">
-                                <h5>First Level 1</h5>
-                                <Image src={arrowDown} alt="iTeacher" />
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="dotted-star">
-                                <Image className='star' src={tringStar} alt="iTeacher" />
-                                <Image className='dots' src={dots} alt="iTeacher" />
-                            </div>
-                            <div className="tring">
-                                <h5>First Level 1</h5>
-                                <Image src={arrowDown} alt="iTeacher" />
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="dotted-star">
-                                <Image className='star' src={tringStar} alt="iTeacher" />
-                                <Image className='dots' src={dots} alt="iTeacher" />
-                            </div>
-                            <div className="tring">
-                                <h5>First Level 1</h5>
-                                <Image src={arrowDown} alt="iTeacher" />
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="dotted-star">
-                                <Image className='star' src={tringStar} alt="iTeacher" />
-                                <Image className='dots' src={dots} alt="iTeacher" />
-                            </div>
-                            <div className="tring">
-                                <h5>First Level 1</h5>
-                                <Image src={arrowDown} alt="iTeacher" />
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="dotted-star">
-                                <Image className='star' src={tringStar} alt="iTeacher" />
-                                <Image className='dots' src={dots} alt="iTeacher" />
-                            </div>
-                            <div className="tring">
-                                <h5>First Level 1</h5>
-                                <Image src={arrowDown} alt="iTeacher" />
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="dotted-star">
-                                <Image className='star' src={tringStar} alt="iTeacher" />
-                                <Image className='dots' src={dots} alt="iTeacher" />
-                            </div>
-                            <div className="tring">
-                                <h5>First Level 1</h5>
-                                <Image src={arrowDown} alt="iTeacher" />
-                            </div>
-                        </div>
+
+                        {
+                            relatives.map((item, index) =>
+                                <div
+                                    className="relative" key={item.id}>
+                                    <motion.div
+                                        initial={{ opacity: 0, y: -100 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{
+                                            type: 'spring',
+                                            bounce: 0.2,
+                                            duration: index * .1,
+                                        }}
+                                        viewport={{ once: true }}
+                                        className="dotted-star">
+                                        <Image className='star' src={tringStar} alt="iTeacher" />
+                                        <Image className='dots' src={dots} alt="iTeacher" />
+                                    </motion.div>
+                                    <motion.div
+                                        initial={{ opacity: 0, x: -100 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{
+                                            type: 'spring',
+                                            bounce: 0.2,
+                                            duration: index * .1,
+                                        }}
+                                        viewport={{ once: true }}
+                                        className="tring">
+                                        <h5>{item.text}</h5>
+                                        <Image src={arrowDown} alt="iTeacher" />
+                                    </motion.div>
+                                </div>
+                            )
+                        }
+
                         <Image className='tall-dotsmm' src={tallDots} alt="iTeacher" />
+                        <motion.div
+                            initial={{ insetInlineStart: 0 }}
+                            whileInView={{ insetInlineStart: "100%" }}
+                            transition={{
+                                type: 'linear',
+                                bounce: 0,
+                                duration: 5,
+                            }}
+                            className="car-cont">
+                            <Image src={car} alt="iTeacher" />
+                        </motion.div>
+                        <motion.div
+                            initial={{opacity: 0, insetInlineStart: 0 }}
+                            whileInView={{opacity: 1, insetInlineStart: "66%" }}
+                            transition={{
+                                type: 'linear',
+                                bounce: 0,
+                                duration: 5,
+                                delay: 5
+                            }}
+                            className="car-cont-2">
+                            <Image src={car} alt="iTeacher" />
+                        </motion.div>
                     </div>
                     <form className="form-cont">
                         <input type="text" placeholder='Write your question here...'></input>
@@ -129,6 +139,6 @@ export default function Rest() {
                     <Image src={cloud} alt='iTeacher' className='cloud-img'></Image>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import sos from '/public/sos.svg'
-import cls from '/public/cls.svg'
+import cls from '/public/cls.png'
 import hager from '/public/hager.svg'
 import mLogo from '/public/messlogo.svg'
 import Image from 'next/image';
